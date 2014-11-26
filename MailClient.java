@@ -4,7 +4,7 @@ public class MailClient
     private MailServer server;
     //Usuario del mensage
     private String user;
-
+    
     /**
      * Constructor for objects of class MailClient
      */
@@ -38,9 +38,9 @@ public class MailClient
         }
     }
 
-    public void sendMailItem(String to, String message)
+    public void sendMailItem(String to, String message, String subject)
     {
-        MailItem item = new MailItem(user, to, message);
+        MailItem item = new MailItem(user, to, message, subject);
         server.post(item);
     }
 }
